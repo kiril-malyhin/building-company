@@ -1,0 +1,27 @@
+.welcome-page {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 70px;
+    background: url("../start.jpg") center;
+    height: 100%;
+    background-size: cover;
+    width: 100%;
+    position: absolute;
+}
+
+.company-label {
+    padding-top: 150px;
+}
+
+.start-button {
+    background-color: transparent;
+    font-size: 40px;
+    margin-top: 90px;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+}
+#start-page .btn:hover{
+    background-color: transparent;
+    border: 2px solid black;
+    color: firebrick;
+}

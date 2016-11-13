@@ -1,0 +1,43 @@
+.result-page {
+    text-align: center;
+    color: whitesmoke;
+    background: url("../result.jpg") center;
+    height: 400%;
+    background-size: cover;
+    width: 100%;
+    position: absolute;
+}
+
+.company-label-result {
+    padding-top: 10px;
+    font-size: 70px;
+}
+
+td, th {
+    border: 1px #ccc solid;
+    text-align: center;
+    cursor: pointer;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.add-button {
+    margin-top: 20px;
+    width: 120px;
+    margin-right: 20px;
+}
+
+#result-page .btn-danger:hover{
+    background-color: darkred;
+    border: darkred;
+}
+
+#result-page .btn-warning:hover{
+    background-color: darkgoldenrod;
+    border: darkgoldenrod;
+}
+
+#result-page .btn-info:hover{
+    background-color: darkblue;
+    border: darkblue;
+}

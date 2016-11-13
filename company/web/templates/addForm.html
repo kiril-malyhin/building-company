@@ -1,0 +1,35 @@
+
+<div class="modal-header">
+    <h3 class="modal-title">Add</h3>
+</div>
+<div class="modal-body">
+    <div class="row" style="padding-left: 30px;padding-right: 30px">
+        <form id="addForm" method="POST" name="addForm" novalidate>
+            <div class="form-group">
+                <label class="control-label">Category</label>
+                <input type="text" name="category" class="form-control" ng-model="addInfo.category" placeholder="Enter category" ng-minlength="1" ng-maxlength="95" required>
+                <p ng-show="addForm.category.$error.minlength" class="help-block">Category is too short.</p>
+                <p ng-show="addForm.category.$error.maxlength" class="help-block">Category is too long.</p>
+                <span class="help-block"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Product name</label>
+                <input type="text" name="product_name" class="form-control" ng-model="addInfo.product_name" placeholder="Enter product name" ng-minlength="1" ng-maxlength="95" required>
+                <p ng-show="addForm.product_name.$error.minlength" class="help-block">Product name is too short.</p>
+                <p ng-show="addForm.product_name.$error.maxlength" class="help-block">Product name is too long.</p>
+                <span class="help-block"></span>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Product amount</label>
+                <input type="number" name="product_amount" class="form-control" ng-model="addInfo.product_amount" placeholder="Enter product amount (number)" ng-minlength="1" ng-maxlength="95" required>
+                <p ng-show="addForm.product_amount.$error.minlength" class="help-block">Product amount is too short.</p>
+                <p ng-show="addForm.product_amount.$error.maxlength" class="help-block">Product amount is too long.</p>
+                <span class="help-block"></span>
+            </div>
+            <div style="padding-top: 20px" class="pull-right">
+                <button ng-click="add()" ng-disabled="addForm.$invalid"  class="btn btn-success btn-log-sign" type="button">Add  <span class="glyphicon glyphicon-plus-sign"></span></button>
+                <button class="btn btn-danger btn-log-sign" type="button" ng-click="Cancel()"><i class="fa fa-times"></i>  Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
