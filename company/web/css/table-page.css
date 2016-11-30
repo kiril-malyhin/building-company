@@ -41,3 +41,185 @@ td, th {
     background-color: darkblue;
     border: darkblue;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    text-transform: capitalize;
+}
+
+.navbar {
+    border-radius: 0;
+    background: #05676E;
+    color: white;
+    font-weight: bold;
+    font-size: 2.3em;
+    border: none;
+    padding: 10px;
+}
+
+.by-month {
+    font-size: 1.3em;
+    color: #668284;
+}
+
+.by-month li {
+    margin: 10px 0;
+}
+
+.bar-chart {
+    display: block;
+    height: 300px;
+    width: 98%;
+    position: relative;
+    border-left: 1px solid #668284;
+    border-bottom: 1px solid #668284;
+    margin-left: 2%;
+    margin-bottom: 50px;
+    /* .pace {
+      height:30px;
+      overflow:hidden;
+      display:none;
+      span {
+        transform:rotate(0deg);
+        background:$turqoise;
+        width:100px;
+        border-radius:5px;
+        left:45px;
+        z-index:0;
+
+      }
+    }*/;
+}
+
+.btn-go:hover {
+    background-color: grey !important;
+    border: grey !important;
+}
+
+.bar-chart td {
+    color: #15002b;
+    position: absolute;
+    width: 20px;
+    bottom: 0;
+    margin-left: 10px;
+    display: block;
+    border: 0;
+}
+
+.bar-chart td span {
+    position: absolute;
+    left: 25px;
+    bottom: 0;
+    padding: 5px;
+    color: white;
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+    width: 300px;
+}
+
+.bar-chart .legend {
+    bottom: -40px;
+    font-size: 0.8em;
+    width: 50px;
+}
+
+.bar-chart .distance {
+    background: #B9D7D9;
+}
+
+.bar-chart .distance.highlight {
+    background: #d9bbb9;
+}
+
+.bar-chart .time {
+    background: #668284;
+    margin-left: 30px;
+}
+
+.bar-chart .time.highlight {
+    background: #846866;
+}
+
+.key {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+}
+
+.key.distance {
+    background: #B9D7D9;
+}
+
+.key.time {
+    background: #668284;
+}
+
+.line-chart {
+    position: relative;
+}
+
+.line-chart:before {
+    content: "Minutes per Mile";
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 30px;
+    width: 200px;
+    transform: rotate(-90deg);
+    transform-origin: bottom left;
+    text-align: center;
+}
+
+.line-chart .line-legend-max {
+    position: absolute;
+    bottom: 20px;
+    font-size: 0.7em;
+    left: 1%;
+}
+
+.line-chart .line-legend-min {
+    position: absolute;
+    top: 15px;
+    font-size: 0.7em;
+    left: 1%;
+}
+
+svg {
+    margin-left: 4%;
+    height: 200px;
+    width: 96%;
+    border-left: 1px solid #668284;
+    border-bottom: 1px solid #668284;
+}
+
+svg line {
+    stroke: #05676E;
+    stroke-width: 3px;
+}
+
+.pie {
+    margin: 0;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+
+table.pie-table {
+    text-align: center;
+    margin: 0 3% 0 10px;
+    width: 120px;
+    height: 60px;
+    float: right;
+}
+
+table.pie-table td {
+    padding: 4px;
+    background: #eee;
+}

@@ -81,6 +81,23 @@ class SiteController extends BaseController
         return json_encode($shops);
     }
 
+    public function actionData(){
+        $query = new Query();
+        $data = $query->select(['sold_data', 'sold_product_amount', 'id'])->from('sold_product')->orderBy('sold_data')->all();
+        return json_encode($data);
+    }
+
+    public function actionFind(){
+
+        $start=Yii::$app->request->post('dateStart');
+        $end=Yii::$app->request->post('dateEnd');
+
+        $query = new Query();
+        $data = $query->select(['sold_data', 'sold_product_amount'])->from('sold_product')
+            ->where(['between', 'id', $start, $end])->all();
+        return json_encode($data);
+    }
+
     public function actionDelete() {
 
         $product_id = Yii::$app->request->post('productId');

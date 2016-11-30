@@ -20,6 +20,41 @@ app.controller("tableCtrl", function($scope, $http, $state, $timeout,Alertify,$u
         });
     };
 
+    $scope.getData = function (){
+        $http.post('index.php?r=site/data').success(function (response) {
+            $scope.dates = response;
+        }).error(function (error) {
+            console.error(error);
+        });
+    };
+    $scope.getData();
+
+
+    $scope.findDate = function (dataStart, dataEnd) {
+
+        var data = {
+            dateStart: dataStart,
+            dateEnd: dataEnd
+        };
+
+        if (dataEnd < dataStart) {
+            Alertify.error('Error! End date more than start date!');
+            return;
+        }
+
+        $http.post('index.php?r=site/find', data).success(function(response){
+            if(response != 'bad'){
+                Alertify.success('Success!');
+                $scope.data = response;
+                $scope.maxTime = Math.max.apply(Math, $scope.data.map(function(o) {
+                    return o.sold_product_amount;
+                }));
+            } else {
+                Alertify.error('Error');
+            }
+        });
+    };
+
     $scope.getClients();
 
     $scope.getShop = function (){
